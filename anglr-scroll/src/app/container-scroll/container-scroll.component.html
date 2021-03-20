@@ -1,1 +1,12 @@
-<p>container-scroll works!</p>
+<cdk-virtual-scroll-viewport
+itemSize="130"
+class="scroll-container">
+
+  <app-card
+  *cdkVirtualFor="let item of items, let i = index"
+  [item]="item"
+  [index]="i"
+  fxLayoutAlign="start center"
+  >
+  </app-card>
+</cdk-virtual-scroll-viewport>

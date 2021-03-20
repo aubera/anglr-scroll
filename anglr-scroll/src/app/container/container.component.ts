@@ -12,8 +12,8 @@ export class ContainerComponent implements OnInit {
     this.initializeItems();
   }
 
-  private initializeItems() {
-    this.items = Array.from({length: 100}).map((_, i) => `Item #${i}`);
+  protected initializeItems() {
+    this.items = Array.from({length: 500}).map((_, i) => `Item #${i}`);
   }
 
 }

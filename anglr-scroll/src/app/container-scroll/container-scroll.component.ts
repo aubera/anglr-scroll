@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { ContainerComponent } from '../container/container.component';
 
 @Component({
   selector: 'app-container-scroll',
   templateUrl: './container-scroll.component.html',
   styleUrls: ['./container-scroll.component.scss']
 })
-export class ContainerScrollComponent implements OnInit {
+export class ContainerScrollComponent extends ContainerComponent implements OnInit {
+  public items: string[];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  public ngOnInit(): void {
+    this.initializeItems();
   }
-
 }
