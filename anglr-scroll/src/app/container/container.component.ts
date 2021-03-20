@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./container.component.scss']
 })
 export class ContainerComponent implements OnInit {
+  public items: string[];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  public ngOnInit(): void {
+    this.initializeItems();
   }
 
+  private initializeItems() {
+    this.items = Array.from({length: 100}).map((_, i) => `Item #${i}`);
+  }
+
+}
+
+export interface Item {
+  name: string;
+  index: number;
 }

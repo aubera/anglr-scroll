@@ -1,1 +1,14 @@
-<p>card works!</p>
+<mat-card fxLayoutAlign="space-around">
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Name" [(ngModel)]="item">
+      <mat-icon matSuffix>face</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Index</mat-label>
+      <input matInput placeholder="Index" [(ngModel)]="index">
+      <mat-icon matSuffix>all_inclusive</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+</mat-card>
